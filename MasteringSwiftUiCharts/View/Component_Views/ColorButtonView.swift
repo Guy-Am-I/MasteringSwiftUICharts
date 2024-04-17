@@ -12,7 +12,6 @@ struct ColorButtonView: View {
     let dim: CGFloat
     let offset: CGFloat
     
-    let action: () -> Void
     @State private var flip: Bool = false
     
     var count: CGFloat {
@@ -50,12 +49,11 @@ struct ColorButtonView: View {
             withAnimation {
                 flip.toggle()
             }
-            
-            action()
         }
+        .padding()
     }
 }
 
 #Preview {
-    ColorButtonView(colors: .constant(Color.defaultColors), dim: 180, offset: 60, action: {})
+    ColorButtonView(colors: .constant(Color.defaultColors), dim: 180, offset: 60)
 }

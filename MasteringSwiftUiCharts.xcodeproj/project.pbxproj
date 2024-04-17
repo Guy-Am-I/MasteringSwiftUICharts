@@ -14,6 +14,7 @@
 		78295A452BCF704700EF30E1 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78295A442BCF704700EF30E1 /* ColorExtension.swift */; };
 		78295A482BCF726300EF30E1 /* ColorButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78295A472BCF726300EF30E1 /* ColorButtonView.swift */; };
 		78295A4A2BCF77C000EF30E1 /* ArcCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78295A492BCF77C000EF30E1 /* ArcCircleView.swift */; };
+		78295A4D2BCF8DF900EF30E1 /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78295A4C2BCF8DF900EF30E1 /* BarChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		78295A442BCF704700EF30E1 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		78295A472BCF726300EF30E1 /* ColorButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorButtonView.swift; sourceTree = "<group>"; };
 		78295A492BCF77C000EF30E1 /* ArcCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcCircleView.swift; sourceTree = "<group>"; };
+		78295A4C2BCF8DF900EF30E1 /* BarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 		78295A402BCF700B00EF30E1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				78295A4B2BCF8DE500EF30E1 /* Chart_Views */,
 				78295A462BCF722200EF30E1 /* Component_Views */,
 			);
 			path = View;
@@ -114,6 +117,14 @@
 				78295A492BCF77C000EF30E1 /* ArcCircleView.swift */,
 			);
 			path = Component_Views;
+			sourceTree = "<group>";
+		};
+		78295A4B2BCF8DE500EF30E1 /* Chart_Views */ = {
+			isa = PBXGroup;
+			children = (
+				78295A4C2BCF8DF900EF30E1 /* BarChartView.swift */,
+			);
+			path = Chart_Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +202,7 @@
 				78295A352BCF5C2B00EF30E1 /* ContentView.swift in Sources */,
 				78295A482BCF726300EF30E1 /* ColorButtonView.swift in Sources */,
 				78295A332BCF5C2B00EF30E1 /* MasteringSwiftUiChartsApp.swift in Sources */,
+				78295A4D2BCF8DF900EF30E1 /* BarChartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

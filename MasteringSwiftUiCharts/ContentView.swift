@@ -12,34 +12,45 @@ struct ContentView: View {
     @State private var colorsPie = Color.randomColorsN(n: 10)
     @State private var colorsGraph = Color.randomColorsN(n: 10)
     var body: some View {
-        ZStack {
-            Color.random.opacity(0.3).ignoresSafeArea()
-            NavigationStack {
-                Image(systemName: "cat")
-                .navigationTitle("Having fun with Charts")
-                .toolbar {
-                    ToolbarItem(placement: .topBarLeading) {
+        NavigationStack {
+            ZStack {
+                Color.blanchedAlmond.opacity(0.3).ignoresSafeArea()
+                VStack(alignment: .leading) {
+                    Spacer()
+                    NavigationLink(destination: BarChartView()) {
                         HStack() {
-                            ColorButtonView(colors: $colorsBar, dim: 40, offset: 15, action: {})
+                            ColorButtonView(colors: $colorsBar, dim: 100, offset: 15)
                             Text("Graph")
-                                .font(.title3)
+                                .font(.largeTitle)
+                                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                                .foregroundStyle(Color.sandyBrown)
+                            Spacer()
                         }
                     }
-                    ToolbarItem(placement: .principal) {
+                    Spacer()
+                    NavigationLink(destination: BarChartView()) {
                         HStack() {
-                            ColorButtonView(colors: $colorsPie, dim: 40, offset: 15, action: {})
+                            ColorButtonView(colors: $colorsPie, dim: 100, offset: 15)
                             Text("Pie")
-                                .font(.title3)
+                                .font(.largeTitle)
+                                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                                .foregroundStyle(Color.darkGoldenRod)
                         }
                     }
-                    ToolbarItem(placement: .topBarTrailing) {
+                    Spacer()
+                    NavigationLink(destination: BarChartView()) {
                         HStack() {
-                            ColorButtonView(colors: $colorsGraph, dim: 40, offset: 15, action: {})
+                            ColorButtonView(colors: $colorsGraph, dim: 100, offset: 15)
                             Text("Bar")
-                                .font(.title3)
+                                .font(.largeTitle)
+                                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                                .foregroundStyle(Color.mediumVioletRed)
                         }
                     }
+                    Spacer()
                 }
+                .padding(.horizontal)
+                .navigationTitle("Having fun with Charts")
             }
         }
     }
