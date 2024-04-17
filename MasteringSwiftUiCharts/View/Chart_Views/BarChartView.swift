@@ -16,19 +16,22 @@ struct BarChartView: View {
     
     var body: some View {
         VStack {
-            Text("Bar Charts for the win")
-            
             Chart {
                 BarMark(x: .value(xAxisLabel, "Sunday"), y: .value(yAxisLabel, 6))
-                    .foregroundStyle(Color.random)
                     .annotation {
                         Image(systemName: "dog")
                     }
-                BarMark(x: .value(xAxisLabel, "Monday"), y: .value(yAxisLabel, 10))
-                    .foregroundStyle(Color.random)
+                    .foregroundStyle(by: .value(xAxisLabel, "Sunday"))
+                BarMark(x: .value(xAxisLabel, "Monday"), y: .value(yAxisLabel, 3))
                     .annotation {
                         Image(systemName: "cat")
                     }
+                    .foregroundStyle(by: .value(xAxisLabel, "Monday #1"))
+                BarMark(x: .value(xAxisLabel, "Monday"), y: .value(yAxisLabel, 5))
+                    .annotation {
+                        Image(systemName: "cat")
+                    }
+                    .foregroundStyle(by: .value(xAxisLabel, "Monday #2"))
                 BarMark(x: .value(xAxisLabel, "Tuesday"), y: .value(yAxisLabel, 9))
                     .foregroundStyle(Color.random)
                     .annotation {
@@ -43,7 +46,7 @@ struct BarChartView: View {
                     .foregroundStyle(Color.random)
                 BarMark(x: .value(xAxisLabel, "Friday"), y: .value(yAxisLabel, 1))
                     .foregroundStyle(Color.random)
-                BarMark(x: .value(xAxisLabel, "Saturday"), y: .value(yAxisLabel, 0))
+                BarMark(x: .value(xAxisLabel, "Saturday"), y: .value(yAxisLabel, 5))
                     .foregroundStyle(Color.random)
             }
             .chartYScale(domain: min...max)
@@ -53,6 +56,9 @@ struct BarChartView: View {
             .chartYAxis {
                 AxisMarks(position: .leading)
             }
+            .chartLegend(position: .top, alignment: .center)
+            .padding()
+            
         }
     }
 }
