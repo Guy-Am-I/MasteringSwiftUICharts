@@ -319,13 +319,18 @@ extension Color {
 
 extension Color {
     static let defaultColors: [Color] = [
-        .pink,
-         .green,
-         .mint,
-         .purple,
-         .indigo,
-         .red,
-         .brown
+        .mediumSpringGreen,
+        .springGreen,
+        .seaGreen,
+        .mediumAquaMarine,
+        .lightSteelBlue,
+        .lavender,
+        .floralWhite,
+        .aliceBlue,
+        .oliveDrab,
+        .lawnGreen,
+        .chartreuse,
+        .greenYellow,
         ]
 }
 
