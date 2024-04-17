@@ -321,14 +321,14 @@ extension Color {
     static let defaultColors: [Color] = [
         .mediumSpringGreen,
         .springGreen,
-        .seaGreen,
-        .mediumAquaMarine,
         .lightSteelBlue,
         .lavender,
-        .floralWhite,
+        .chocolate,
+        .peru,
+        .sandyBrown,
+        .burlyWood,
         .aliceBlue,
         .oliveDrab,
-        .lawnGreen,
         .chartreuse,
         .greenYellow,
         ]
