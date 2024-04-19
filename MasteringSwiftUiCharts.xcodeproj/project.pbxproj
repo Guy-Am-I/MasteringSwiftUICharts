@@ -16,6 +16,8 @@
 		78295A4A2BCF77C000EF30E1 /* ArcCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78295A492BCF77C000EF30E1 /* ArcCircleView.swift */; };
 		78295A4D2BCF8DF900EF30E1 /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78295A4C2BCF8DF900EF30E1 /* BarChartView.swift */; };
 		7888D5ED2BD2F48A00CFEC74 /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7888D5EC2BD2F48A00CFEC74 /* LineChartView.swift */; };
+		7888D5EF2BD2FD9400CFEC74 /* AnimesWatchedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7888D5EE2BD2FD9400CFEC74 /* AnimesWatchedModel.swift */; };
+		7888D5F12BD2FEC200CFEC74 /* AnimeWatchedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7888D5F02BD2FEC200CFEC74 /* AnimeWatchedViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		78295A492BCF77C000EF30E1 /* ArcCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcCircleView.swift; sourceTree = "<group>"; };
 		78295A4C2BCF8DF900EF30E1 /* BarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
 		7888D5EC2BD2F48A00CFEC74 /* LineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = SOURCE_ROOT; };
+		7888D5EE2BD2FD9400CFEC74 /* AnimesWatchedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnimesWatchedModel.swift; path = MasteringSwiftUiCharts/View/Chart_Views/AnimesWatchedModel.swift; sourceTree = SOURCE_ROOT; };
+		7888D5F02BD2FEC200CFEC74 /* AnimeWatchedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnimeWatchedViewModel.swift; path = MasteringSwiftUiCharts/Model/AnimeWatchedViewModel.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 		78295A412BCF701000EF30E1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				7888D5F02BD2FEC200CFEC74 /* AnimeWatchedViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -100,6 +105,7 @@
 		78295A422BCF701400EF30E1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7888D5EE2BD2FD9400CFEC74 /* AnimesWatchedModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -201,10 +207,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				78295A452BCF704700EF30E1 /* ColorExtension.swift in Sources */,
+				7888D5EF2BD2FD9400CFEC74 /* AnimesWatchedModel.swift in Sources */,
 				7888D5ED2BD2F48A00CFEC74 /* LineChartView.swift in Sources */,
 				78295A4A2BCF77C000EF30E1 /* ArcCircleView.swift in Sources */,
 				78295A352BCF5C2B00EF30E1 /* ContentView.swift in Sources */,
 				78295A482BCF726300EF30E1 /* ColorButtonView.swift in Sources */,
+				7888D5F12BD2FEC200CFEC74 /* AnimeWatchedViewModel.swift in Sources */,
 				78295A332BCF5C2B00EF30E1 /* MasteringSwiftUiChartsApp.swift in Sources */,
 				78295A4D2BCF8DF900EF30E1 /* BarChartView.swift in Sources */,
 			);

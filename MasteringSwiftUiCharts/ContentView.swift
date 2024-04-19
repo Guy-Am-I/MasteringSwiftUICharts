@@ -17,7 +17,7 @@ struct ContentView: View {
                 Color.blanchedAlmond.opacity(0.3).ignoresSafeArea()
                 VStack(alignment: .leading) {
                     Spacer()
-                    NavigationLink(destination: LineChartView()) {
+                    NavigationLink(destination: LineChartView(data: getAnimeModelTestData())) {
                         HStack() {
                             ColorButtonView(colors: $colorsBar, dim: 100, offset: 15)
                             Text("Line")
@@ -31,7 +31,7 @@ struct ContentView: View {
                     NavigationLink(destination: BarChartView()) {
                         HStack() {
                             ColorButtonView(colors: $colorsPie, dim: 100, offset: 15)
-                            Text("Pie")
+                            Text("Advanced Bar Chart")
                                 .font(.largeTitle)
                                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                                 .foregroundStyle(Color.darkGoldenRod)
