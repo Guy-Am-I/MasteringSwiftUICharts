@@ -17,10 +17,10 @@ struct ContentView: View {
                 Color.blanchedAlmond.opacity(0.3).ignoresSafeArea()
                 VStack(alignment: .leading) {
                     Spacer()
-                    NavigationLink(destination: BarChartView()) {
+                    NavigationLink(destination: LineChartView()) {
                         HStack() {
                             ColorButtonView(colors: $colorsBar, dim: 100, offset: 15)
-                            Text("Graph")
+                            Text("Line")
                                 .font(.largeTitle)
                                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                                 .foregroundStyle(Color.sandyBrown)
@@ -48,6 +48,22 @@ struct ContentView: View {
                         }
                     }
                     Spacer()
+                    ScrollView(.horizontal) {
+                        HStack {
+                            let chartTypes = ["Bar", "Line", "Area", "Scatter", "Heat", "Pie"]
+                            ForEach(chartTypes, id: \.self) { name in
+                                ZStack {
+                                    Circle()
+                                        .stroke(lineWidth: 2)
+                                        .foregroundStyle(.blue)
+                                    Text(name)
+                                        .font(.title2)
+                                        .fontWeight(.bold)
+                                }
+                                .frame(width: 80, height: 150)
+                            }
+                        }
+                    }
                 }
                 .padding(.horizontal)
                 .navigationTitle("Having fun with Charts")
