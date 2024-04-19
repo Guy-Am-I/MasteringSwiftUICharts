@@ -28,7 +28,7 @@ struct ContentView: View {
                         }
                     }
                     Spacer()
-                    NavigationLink(destination: AdvancedBarChartView(dailySales: defaultDailySales, min: 0.0, max: 700.0)) {
+                    NavigationLink(destination: AdvancedBarChartView(chartItem: ChartItem.defaultChartItem)) {
                         HStack() {
                             ColorButtonView(colors: $colorsPie, dim: 100, offset: 15)
                             Text("Advanced Bar Chart")

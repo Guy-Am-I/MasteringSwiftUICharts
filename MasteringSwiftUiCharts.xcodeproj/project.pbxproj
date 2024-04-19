@@ -29,6 +29,7 @@
 		7888D6032BD3100000CFEC74 /* ChartButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7888D6022BD3100000CFEC74 /* ChartButtonsView.swift */; };
 		7888D6052BD3141E00CFEC74 /* RuleMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7888D6042BD3141E00CFEC74 /* RuleMarkView.swift */; };
 		7888D6072BD3208700CFEC74 /* ChartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7888D6062BD3208700CFEC74 /* ChartItem.swift */; };
+		7888D6092BD33B5400CFEC74 /* ChartDragVertical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7888D6082BD33B5400CFEC74 /* ChartDragVertical.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		7888D6022BD3100000CFEC74 /* ChartButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartButtonsView.swift; sourceTree = "<group>"; };
 		7888D6042BD3141E00CFEC74 /* RuleMarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RuleMarkView.swift; path = MasteringSwiftUiCharts/View/Chart_Views/RuleMarkView.swift; sourceTree = SOURCE_ROOT; };
 		7888D6062BD3208700CFEC74 /* ChartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartItem.swift; sourceTree = "<group>"; };
+		7888D6082BD33B5400CFEC74 /* ChartDragVertical.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDragVertical.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 		78295A4B2BCF8DE500EF30E1 /* Chart_Views */ = {
 			isa = PBXGroup;
 			children = (
+				7888D6082BD33B5400CFEC74 /* ChartDragVertical.swift */,
 				7888D5F52BD30E4A00CFEC74 /* AreaChartHorizontalView.swift */,
 				7888D5F62BD30E4A00CFEC74 /* AreaChartVerticalView.swift */,
 				7888D5F42BD30E4A00CFEC74 /* BarChartHorizontalView.swift */,
@@ -244,6 +247,7 @@
 				7888D5FA2BD30E4B00CFEC74 /* BarChartHorizontalView.swift in Sources */,
 				7888D5EF2BD2FD9400CFEC74 /* AnimesWatchedModel.swift in Sources */,
 				7888D5FD2BD30E4B00CFEC74 /* BarChartVerticalView.swift in Sources */,
+				7888D6092BD33B5400CFEC74 /* ChartDragVertical.swift in Sources */,
 				7888D6012BD30E8200CFEC74 /* Data File.swift in Sources */,
 				7888D5FC2BD30E4B00CFEC74 /* AreaChartVerticalView.swift in Sources */,
 				7888D5FF2BD30E4B00CFEC74 /* LineChartVerticalView.swift in Sources */,

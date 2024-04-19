@@ -28,7 +28,7 @@ struct AdvancedBarChartView: View {
                 if chartItem.isVerticalChart {
                     switch(chartItem.chartType) {
                     case .bar:
-                        BarChartVerticalView(dailySales: chartItem.dailySales, barColors: chartItem.barColors, selectedDay: $chartItem.selectedDay, chartItem.min, chartItem.max)
+                        BarChartVerticalView(chartItem: $chartItem)
                     case .line:
                         LineChartVerticalView(dailySales: chartItem.dailySales)
                     case .area:
