@@ -13,15 +13,10 @@ enum ChartType {
 }
 
 struct AdvancedBarChartView: View {
-    let dailySales: [DailySalesType]
-    let min: Double
-    let max: Double
-    @State var barColors: [Color] = defaultBarColors
-    @State var chartType: ChartType = .bar
-    @State var selectedDay: String = "Sun"
+    @State var chartItem: ChartItem
+    
     let xAxisMarkPosition: AxisMarkPosition = .bottom
     let yAxisMarkPosition: AxisMarkPosition = .leading
-    @State private var isVerticalChart = true
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -29,24 +24,24 @@ struct AdvancedBarChartView: View {
                 .font(.largeTitle)
                 .fontWeight(.semibold)
             HStack {
-                ChartButtonsView(barColors: $barColors, chartType: $chartType, isVerticalChart: $isVerticalChart)
-                if isVerticalChart {
-                    switch(chartType) {
+                ChartButtonsView(barColors: $chartItem.barColors, chartType: $chartItem.chartType, isVerticalChart: $chartItem.isVerticalChart)
+                if chartItem.isVerticalChart {
+                    switch(chartItem.chartType) {
                     case .bar:
-                        BarChartVerticalView(dailySales: dailySales, barColors: barColors, selectedDay: $selectedDay, min: 0.0, max: 1000.0)
+                        BarChartVerticalView(dailySales: chartItem.dailySales, barColors: chartItem.barColors, selectedDay: $chartItem.selectedDay, chartItem.min, chartItem.max)
                     case .line:
-                        LineChartVerticalView(dailySales: dailySales)
+                        LineChartVerticalView(dailySales: chartItem.dailySales)
                     case .area:
-                        AreaChartVerticalView(dailySales: dailySales)
+                        AreaChartVerticalView(dailySales: chartItem.dailySales)
                     }
                 } else {
-                    switch(chartType) {
+                    switch(chartItem.chartType) {
                     case .bar:
-                        BarChartHorizontalView(dailySales: dailySales, barColors: barColors)
+                        BarChartHorizontalView(dailySales: chartItem.dailySales, barColors: chartItem.barColors)
                     case .line:
-                        LineChartHorizontalView(dailySales: dailySales)
+                        LineChartHorizontalView(dailySales: chartItem.dailySales)
                     case .area:
-                        AreaChartHorizontalView(dailySales: dailySales)
+                        AreaChartHorizontalView(dailySales: chartItem.dailySales)
                     }
                 }
             }
@@ -56,7 +51,5 @@ struct AdvancedBarChartView: View {
     }
 }
 #Preview {
-    AdvancedBarChartView(dailySales: defaultDailySales,
-                         min: 0.0,
-                         max: 700.0)
+    AdvancedBarChartView(chartItem: ChartItem.defaultChartItem)
 }

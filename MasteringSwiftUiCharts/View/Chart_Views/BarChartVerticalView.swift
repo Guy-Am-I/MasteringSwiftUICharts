@@ -2,30 +2,34 @@
 import SwiftUI
 import Charts
 
-struct BarChartVerticalView: View {
-    @State var dailySales: [DailySalesType]
-    let barColors: [Color]
-    @Binding var selectedDay: String
 
-    let min: Double
-    let max: Double
+struct BarChartVerticalView: View {
+    
+    @Binding var chartItem: ChartItem
+    var min: Double {
+        chartItem.min
+    }
+    var max: Double {
+        chartItem.max
+    }
+
     @State var isDragging: Bool = false
     var salesOnSelectedDay: Double {
-        getSalesOfSelectedDay(dailySales: dailySales, selectedDay: selectedDay)
+        getSalesOfSelectedDay(dailySales: chartItem.dailySales, selectedDay: chartItem.selectedDay)
     }
     var body: some View {
         Chart {
-            ForEach(dailySales) { item in
+            ForEach(chartItem.dailySales) { item in
                 BarMark(
                     x: .value("Day", item.day),
                     y: .value("Sales", item.sales))
                 .foregroundStyle(by: .value("Day", item.day))
             }
             if isDragging {
-                RuleMarkView(selectedDay: selectedDay, salesOnSelectedDay: salesOnSelectedDay, intMode: true)
+                RuleMarkView(selectedDay: chartItem.selectedDay, salesOnSelectedDay: salesOnSelectedDay, intMode: true)
             }
         }
-        .chartForegroundStyleScale(range: barColors)
+        .chartForegroundStyleScale(range: chartItem.barColors)
         .chartYScale(domain: min...max)
         .chartOverlay { outer in
             GeometryReader { inner in
@@ -37,9 +41,9 @@ struct BarChartVerticalView: View {
                             isDragging = true
                             let location = val.location
                             let (newDay, sales) = outer.value(at: location, as: (String, Double).self) ?? ("error", -1)
-                            selectedDay = newDay
+                            chartItem.selectedDay = newDay
                             
-                            setSalesOfSelectedDay(dailySales: &dailySales, selectedDay: selectedDay, sales: sales, min: min, max: max)
+                            setSalesOfSelectedDay(dailySales: &chartItem.dailySales, selectedDay: chartItem.selectedDay, sales: sales, min: min, max: max)
                         }
                         .onEnded({ val in
                             isDragging = false
@@ -53,7 +57,6 @@ struct BarChartVerticalView: View {
 
 struct BarChartVerticalView_Previews: PreviewProvider {
     static var previews: some View {
-        BarChartVerticalView(dailySales: defaultDailySales,
-                             barColors: defaultBarColors, selectedDay: .constant("Sun"), min: 0.0, max: 1000.0)
+        BarChartVerticalView(chartItem: .constant(ChartItem.defaultChartItem))
     }
 }

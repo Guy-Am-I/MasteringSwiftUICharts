@@ -28,6 +28,7 @@
 		7888D6012BD30E8200CFEC74 /* Data File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7888D6002BD30E8200CFEC74 /* Data File.swift */; };
 		7888D6032BD3100000CFEC74 /* ChartButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7888D6022BD3100000CFEC74 /* ChartButtonsView.swift */; };
 		7888D6052BD3141E00CFEC74 /* RuleMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7888D6042BD3141E00CFEC74 /* RuleMarkView.swift */; };
+		7888D6072BD3208700CFEC74 /* ChartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7888D6062BD3208700CFEC74 /* ChartItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		7888D6002BD30E8200CFEC74 /* Data File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data File.swift"; sourceTree = "<group>"; };
 		7888D6022BD3100000CFEC74 /* ChartButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartButtonsView.swift; sourceTree = "<group>"; };
 		7888D6042BD3141E00CFEC74 /* RuleMarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RuleMarkView.swift; path = MasteringSwiftUiCharts/View/Chart_Views/RuleMarkView.swift; sourceTree = SOURCE_ROOT; };
+		7888D6062BD3208700CFEC74 /* ChartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			children = (
 				7888D6002BD30E8200CFEC74 /* Data File.swift */,
 				7888D5EE2BD2FD9400CFEC74 /* AnimesWatchedModel.swift */,
+				7888D6062BD3208700CFEC74 /* ChartItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				7888D5ED2BD2F48A00CFEC74 /* LineChartView.swift in Sources */,
 				7888D5F32BD30A2900CFEC74 /* AdvancedBarChartView.swift in Sources */,
 				78295A4A2BCF77C000EF30E1 /* ArcCircleView.swift in Sources */,
+				7888D6072BD3208700CFEC74 /* ChartItem.swift in Sources */,
 				78295A352BCF5C2B00EF30E1 /* ContentView.swift in Sources */,
 				78295A482BCF726300EF30E1 /* ColorButtonView.swift in Sources */,
 				7888D5FB2BD30E4B00CFEC74 /* AreaChartHorizontalView.swift in Sources */,
