@@ -18,6 +18,7 @@ struct AdvancedBarChartView: View {
     let max: Double
     @State var barColors: [Color] = defaultBarColors
     @State var chartType: ChartType = .bar
+    @State var selectedDay: String = "Sun"
     let xAxisMarkPosition: AxisMarkPosition = .bottom
     let yAxisMarkPosition: AxisMarkPosition = .leading
     @State private var isVerticalChart = true
@@ -32,7 +33,7 @@ struct AdvancedBarChartView: View {
                 if isVerticalChart {
                     switch(chartType) {
                     case .bar:
-                        BarChartVerticalView(dailySales: dailySales, barColors: barColors)
+                        BarChartVerticalView(dailySales: dailySales, barColors: barColors, selectedDay: $selectedDay, min: 0.0, max: 1000.0)
                     case .line:
                         LineChartVerticalView(dailySales: dailySales)
                     case .area:
