@@ -23,82 +23,39 @@ struct AdvancedBarChartView: View {
     @State private var isVerticalChart = true
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             Text("Chart Demo 3")
                 .font(.largeTitle)
                 .fontWeight(.semibold)
-            
-            if isVerticalChart {
-                switch(chartType) {
-                case .bar:
-                    BarChartVerticalView(dailySales: dailySales, barColors: barColors)
-                case .line:
-                    LineChartVerticalView(dailySales: dailySales)
-                case .area:
-                    AreaChartVerticalView(dailySales: dailySales)
-                }
-            } else {
-                switch(chartType) {
-                case .bar:
-                    BarChartHorizontalView(dailySales: dailySales, barColors: barColors)
-                case .line:
-                    LineChartHorizontalView(dailySales: dailySales)
-                case .area:
-                    AreaChartHorizontalView(dailySales: dailySales)
-                }
-            }
-            
-           // Chart Buttons
             HStack {
-                
-                ColorButtonView(
-                    colors: $barColors,
-                    dim: 30,
-                    offset: 10)
-
-                Spacer()
-
-               Button(action: {
-                   withAnimation {
-                       chartType = .bar
-                   }
-               }, label: {
-                   Text("BAR")
-               })
-                Spacer()
-                Button(action: {
-                    withAnimation {
-                        chartType = .line
+                ChartButtonsView(barColors: $barColors, chartType: $chartType, isVerticalChart: $isVerticalChart)
+                if isVerticalChart {
+                    switch(chartType) {
+                    case .bar:
+                        BarChartVerticalView(dailySales: dailySales, barColors: barColors)
+                    case .line:
+                        LineChartVerticalView(dailySales: dailySales)
+                    case .area:
+                        AreaChartVerticalView(dailySales: dailySales)
                     }
-                }, label: {
-                    Text("LINE")
-                })
-                Spacer()
-                Button(action: {
-                    withAnimation {
-                        chartType = .area
+                } else {
+                    switch(chartType) {
+                    case .bar:
+                        BarChartHorizontalView(dailySales: dailySales, barColors: barColors)
+                    case .line:
+                        LineChartHorizontalView(dailySales: dailySales)
+                    case .area:
+                        AreaChartHorizontalView(dailySales: dailySales)
                     }
-                }, label: {
-                    Text("AREA")
-                })
-                Spacer()
-                Button(action: {
-                    withAnimation {
-                        isVerticalChart.toggle()
-                    }
-                }, label: {
-                    Image(systemName: "chart.bar.fill")
-                        .rotationEffect(.degrees(isVerticalChart ? 90 : 0))
-                })
-
+                }
             }
-            .padding()
+            
         }
         .padding()
     }
 }
 #Preview {
     AdvancedBarChartView(dailySales: defaultDailySales,
-                          min: 0.0,
-                          max: 700.0)
+                         min: 0.0,
+                         max: 700.0)
 }

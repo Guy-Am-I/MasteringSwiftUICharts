@@ -18,7 +18,9 @@ struct BarChartHorizontalView: View {
                 BarMark(
                     x: .value("Sales", item.sales),
                     y: .value("Day", item.day))
-                .foregroundStyle(by: .value("Day", item.day))            }
+                .foregroundStyle(by: .value("Day", item.day))
+            }
+            
         }
         .chartForegroundStyleScale( range: barColors)
     }

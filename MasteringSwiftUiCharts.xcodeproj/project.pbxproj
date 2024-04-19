@@ -26,6 +26,8 @@
 		7888D5FE2BD30E4B00CFEC74 /* LineChartHorizontalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7888D5F82BD30E4B00CFEC74 /* LineChartHorizontalView.swift */; };
 		7888D5FF2BD30E4B00CFEC74 /* LineChartVerticalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7888D5F92BD30E4B00CFEC74 /* LineChartVerticalView.swift */; };
 		7888D6012BD30E8200CFEC74 /* Data File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7888D6002BD30E8200CFEC74 /* Data File.swift */; };
+		7888D6032BD3100000CFEC74 /* ChartButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7888D6022BD3100000CFEC74 /* ChartButtonsView.swift */; };
+		7888D6052BD3141E00CFEC74 /* RuleMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7888D6042BD3141E00CFEC74 /* RuleMarkView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,8 @@
 		7888D5F82BD30E4B00CFEC74 /* LineChartHorizontalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChartHorizontalView.swift; sourceTree = "<group>"; };
 		7888D5F92BD30E4B00CFEC74 /* LineChartVerticalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChartVerticalView.swift; sourceTree = "<group>"; };
 		7888D6002BD30E8200CFEC74 /* Data File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data File.swift"; sourceTree = "<group>"; };
+		7888D6022BD3100000CFEC74 /* ChartButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartButtonsView.swift; sourceTree = "<group>"; };
+		7888D6042BD3141E00CFEC74 /* RuleMarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RuleMarkView.swift; path = MasteringSwiftUiCharts/View/Chart_Views/RuleMarkView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,8 @@
 		78295A462BCF722200EF30E1 /* Component_Views */ = {
 			isa = PBXGroup;
 			children = (
+				7888D6042BD3141E00CFEC74 /* RuleMarkView.swift */,
+				7888D6022BD3100000CFEC74 /* ChartButtonsView.swift */,
 				78295A472BCF726300EF30E1 /* ColorButtonView.swift */,
 				78295A492BCF77C000EF30E1 /* ArcCircleView.swift */,
 			);
@@ -230,6 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7888D6052BD3141E00CFEC74 /* RuleMarkView.swift in Sources */,
 				78295A452BCF704700EF30E1 /* ColorExtension.swift in Sources */,
 				7888D5FA2BD30E4B00CFEC74 /* BarChartHorizontalView.swift in Sources */,
 				7888D5EF2BD2FD9400CFEC74 /* AnimesWatchedModel.swift in Sources */,
@@ -247,6 +254,7 @@
 				78295A332BCF5C2B00EF30E1 /* MasteringSwiftUiChartsApp.swift in Sources */,
 				78295A4D2BCF8DF900EF30E1 /* BarChartView.swift in Sources */,
 				7888D5FE2BD30E4B00CFEC74 /* LineChartHorizontalView.swift in Sources */,
+				7888D6032BD3100000CFEC74 /* ChartButtonsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
